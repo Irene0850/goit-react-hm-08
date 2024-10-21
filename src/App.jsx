@@ -1,26 +1,56 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
-import ContactForm from "./components/ContactForm/ContactForm";
-import ContactList from "./components/ContactList/ContactList";
-import SearchBox from "./components/SearchBox/SearchBox";
-import { useEffect } from "react";
-import { fetchContacts } from "./redux/contactsOps";
+import { lazy, Suspense, useEffect } from "react";
+import { Route } from "react-router-dom";
 
-function App() {
+const HomePage = lazy(() => import("./pages/HomePages/HomePages"));
+
+const RegistrationPage = lazy(() =>
+  import("./pages/RegistrationPage/RegistrationPage")
+);
+
+const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage"));
+
+const ContactsPage = lazy(() => import("./pages/ContactsPage/ContactsPage"));
+
+export const App = () => {
   const dispatch = useDispatch();
+  const isRefreshing = useSelector(getIsRefreshing);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
-    <div>
-      <h1 className="title">Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
-    </div>
+  return isRefreshing ? (
+    <b>Refreshing user, please wait...</b>
+  ) : (
+    <Layout>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                element={<RegistrationPage />}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute redirectTo="/contacts" element={<LoginPage />} />
+            }
+          />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute redirectTo="/login" element={<ContactsPage />} />
+            }
+          />
+        </Routes>
+      </Suspense>
+    </Layout>
   );
-}
-
-export default App;
+};
