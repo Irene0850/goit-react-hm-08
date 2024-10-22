@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.username {
+  font-weight: 700;
+}
+
+.page {
+  font-size: 18px;
+  color: rgb(65, 63, 211);
+  text-shadow: 0cqh;
+}

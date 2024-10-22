@@ -1,19 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import { lazy, Suspense, useEffect } from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { getIsRefreshing } from "../redux/auth/selectors";
+import { Layout } from "./Layout/Loyout";
+import { RestrictedRoute } from "./RestrictedRoute/RestrictedRoute";
+import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
+import { refreshUser } from "../redux/auth/operations";
 
-const HomePage = lazy(() => import("./pages/HomePages/HomePages"));
+const HomePage = lazy(() => import("../pages/HomePages/HomePages"));
 
 const RegistrationPage = lazy(() =>
-  import("./pages/RegistrationPage/RegistrationPage")
+  import("../pages/RegistrationPage/RegistrationPage")
 );
 
-const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage"));
+const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
 
-const ContactsPage = lazy(() => import("./pages/ContactsPage/ContactsPage"));
+const ContactsPage = lazy(() => import("../pages/ContactsPage/ContactsPage"));
 
-export const App = () => {
+const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(getIsRefreshing);
 
@@ -54,3 +59,5 @@ export const App = () => {
     </Layout>
   );
 };
+
+export default App;
