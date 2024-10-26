@@ -3,9 +3,20 @@
   text-decoration: none;
   padding: 12px;
   font-weight: 700;
-  color: #297798;
+  color: #85bed6;
 }
 
 .link.active {
   color: #e84a5f;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon:hover {
+  color: beige;
+  filter: drop-shadow(1px 1px 20px rgb(253, 253, 1));
+  transform: scale(1.1);
 }

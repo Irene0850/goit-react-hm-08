@@ -6,17 +6,21 @@ import css from "./Navigation.module.css";
 
 import { NavLink } from "react-router-dom";
 
+import homeIcon from "../../assets/homeIcon.svg";
+
+import contactIcon from "../../assets/contactIcon.svg";
+
 export const Navigation = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
 
   return (
     <nav>
       <NavLink className={css.link} to="/">
-        Home
+        <img src={homeIcon} alt="Home" className={css.icon} />
       </NavLink>
       {isLoggedIn && (
         <NavLink className={css.link} to="/contacts">
-          Contacts
+          <img src={contactIcon} alt="Contact" className={css.icon} />
         </NavLink>
       )}
     </nav>

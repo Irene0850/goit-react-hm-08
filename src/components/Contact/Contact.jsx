@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import css from "./Contact.module.css";
 import { deleteContact } from "../../redux/contacts/operations";
+import deleteIcon from "../../assets/deleteIcon.svg";
 
 const Contact = ({ item: { id, name, number } }) => {
   const dispath = useDispatch();
@@ -15,6 +16,7 @@ const Contact = ({ item: { id, name, number } }) => {
         </div>
         <button className={css.button} onClick={handleDelete}>
           Delete
+          <img src={deleteIcon} alt="Delete" className={css.icon} />
         </button>
       </li>
     </div>

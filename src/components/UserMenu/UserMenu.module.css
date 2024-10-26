@@ -13,3 +13,38 @@
   color: rgb(65, 63, 211);
   text-shadow: 0cqh;
 }
+
+.btn {
+  display: flex;
+  align-items: center;
+  background-color: #481438;
+  color: rgb(81, 248, 248);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7c51c0;
+  filter: drop-shadow(1px 1px 20px rgb(232, 232, 206));
+}
+
+.icon {
+  margin-left: 16px;
+  width: 20px;
+  height: 20px;
+  animation: moveIcon 1.5s infinite;
+}
+
+@keyframes moveIcon {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

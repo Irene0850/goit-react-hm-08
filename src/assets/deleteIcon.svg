@@ -1,0 +1,75 @@
+<svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="50"
+            height="50"
+            viewBox="0 0 4000 4000"
+          >
+            <linearGradient
+              id="OXuLephP0QYaa20bzVdt4a_AfGPbbOjxOJ3_gr1"
+              x1="1027.383"
+              x2="2931.383"
+              y1="2687.749"
+              y2="2687.749"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#c9f7f5"></stop>
+              <stop offset="1" stop-color="#47ebda"></stop>
+            </linearGradient>
+            <path
+              fill="url(#OXuLephP0QYaa20bzVdt4a_AfGPbbOjxOJ3_gr1)"
+              d="M2659.384,3095.75H1299.382c-150.221,0-271.999-121.778-271.999-271.999v-0.001 c0-300.443,243.557-544,544-544h816c300.443,0,544,243.557,544,544v0.001C2931.383,2973.971,2809.605,3095.75,2659.384,3095.75z"
+            ></path>
+            <linearGradient
+              id="OXuLephP0QYaa20bzVdt4b_AfGPbbOjxOJ3_gr2"
+              x1="1355.008"
+              x2="2587.258"
+              y1="1391.624"
+              y2="1391.624"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#e3e4e6"></stop>
+              <stop offset="1" stop-color="#7f8eb8"></stop>
+            </linearGradient>
+            <circle
+              cx="1971.133"
+              cy="1391.625"
+              r="616.125"
+              fill="url(#OXuLephP0QYaa20bzVdt4b_AfGPbbOjxOJ3_gr2)"
+            ></circle>
+            <g>
+              <linearGradient
+                id="OXuLephP0QYaa20bzVdt4c_AfGPbbOjxOJ3_gr3"
+                x1="2498.68"
+                x2="3347.617"
+                y1="3087.501"
+                y2="3087.501"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="#e3e4e6"></stop>
+                <stop offset="1" stop-color="#7f8eb8"></stop>
+              </linearGradient>
+              <path
+                fill="url(#OXuLephP0QYaa20bzVdt4c_AfGPbbOjxOJ3_gr3)"
+                d="M2634.68,3512 c-34.797,0-69.594-13.281-96.156-39.827c-53.125-53.108-53.125-139.22,0-192.329l576.938-577.004 c53.125-53.125,139.188-53.108,192.312-0.017c53.125,53.108,53.125,139.221,0,192.329l-576.938,577.004 C2704.273,3498.719,2669.477,3512,2634.68,3512z"
+              ></path>
+            </g>
+            <g>
+              <linearGradient
+                id="OXuLephP0QYaa20bzVdt4d_AfGPbbOjxOJ3_gr4"
+                x1="2498.68"
+                x2="3347.617"
+                y1="3087.501"
+                y2="3087.501"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="#e3e4e6"></stop>
+                <stop offset="1" stop-color="#7f8eb8"></stop>
+              </linearGradient>
+              <path
+                fill="url(#OXuLephP0QYaa20bzVdt4d_AfGPbbOjxOJ3_gr4)"
+                d="M3211.617,3512 c-34.797,0-69.594-13.281-96.156-39.844l-576.938-577.004c-53.125-53.108-53.125-139.221,0-192.329 c53.125-53.092,139.188-53.108,192.312,0.017l576.938,577.004c53.125,53.108,53.125,139.22,0,192.329 C3281.211,3498.719,3246.414,3512,3211.617,3512z"
+              ></path>
+            </g>
+          </svg>
