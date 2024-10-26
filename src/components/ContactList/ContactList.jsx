@@ -25,11 +25,13 @@ const ContactList = () => {
         {loading && !error && <Loader />}
         {error && <p>Oops, something went wrong! Please, try again</p>}
         {filteredContacts.map((contact) => {
-          <Contact
-            key={contact.id}
-            item={contact}
-            onDeleteContact={() => handleDeleteContact(contact.id)}
-          />;
+          return (
+            <Contact
+              key={contact.id}
+              item={contact}
+              onDeleteContact={() => handleDeleteContact(contact.id)}
+            />
+          );
         })}
       </ul>
     </div>
